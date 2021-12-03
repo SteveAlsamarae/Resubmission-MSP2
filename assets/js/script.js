@@ -39,3 +39,19 @@ function saveName() {
   let selected_option = "";
   let last_option_selected = "";
   
+
+  function highlight(selected_choice) {
+    if (selected_option == "") {
+      selected_option = selected_choice;
+      document.getElementById(selected_choice).style.background =
+        "rgb(48, 172, 221)";
+    } else {
+      document.getElementById(selected_option).style.background =
+        "rgb(66, 142, 172)";
+      selected_option = selected_choice;
+      document.getElementById(selected_choice).style.background =
+        "rgb(48, 172, 221)";
+    }
+    document.getElementById(selected_choice).style.borderRadius = "1rem";
+    last_option_selected = selected_option;
+  }
