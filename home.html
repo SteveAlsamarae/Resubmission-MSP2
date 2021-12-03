@@ -1,37 +1,46 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
+<html>
+  <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/style.css" />
     <title>Home</title>
-</head>
-<body>
+  </head>
+
+  <body>
+    <div id="score_Track_block">
+      <h1 id="score_Track"></h1>
+    </div>
     <div id="upper">
-        <h2 id="question"></h2>
-        <h2
-          class="choices"
-          id="multiple_choices_A"
-          onClick="highlight(this.id)"
-        ></h2>
-        <h2
-          class="choices"
-          id="multiple_choices_B"
-          onClick="highlight(this.id)"
-        ></h2>
-        <h2
-          class="choices"
-          id="multiple_choices_C"
-          onClick="highlight(this.id)"
-        ></h2>
-        <h2
-          class="choices"
-          id="multiple_choices_D"
-          onClick="highlight(this.id)"
-        ></h2>
-        </div>
-    
-<script src="assets/js/script.js"></script> 
-</body>
+      <h2 id="question"></h2>
+      <h2
+        class="choices"
+        id="multiple_choices_A"
+        onClick="highlight(this.id)"
+      ></h2>
+      <h2
+        class="choices"
+        id="multiple_choices_B"
+        onClick="highlight(this.id)"
+      ></h2>
+      <h2
+        class="choices"
+        id="multiple_choices_C"
+        onClick="highlight(this.id)"
+      ></h2>
+      <h2
+        class="choices"
+        id="multiple_choices_D"
+        onClick="highlight(this.id)"
+      ></h2>
+      <div class="next_question_block">
+        <button class="next_question" onClick="load_next_question()">Next</button>
+      </div>
+    </div>
+    <div id="lower">
+      <h1 id="final_score"></h1>
+      <button id="play_again" onClick="Re_Play()">Play Again</button>
+    </div>
+    <script src="assets/js/script.js"></script>
+  </body>
 </html>
