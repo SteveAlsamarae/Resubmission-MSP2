@@ -1,0 +1,203 @@
+:root {
+    --theme-color: rgb(66, 142, 172);
+    --hover-color: rgb(48, 172, 221);
+    --button-default-color: rgb(188, 188, 202);
+    --font-size: 1.45rem;
+    --header-size: 6rem;
+    --border-radius: 1.45rem;
+    --default-text-color: white;
+  }
+  
+  html {
+    background-color: var(--theme-color);
+    font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif, Times,
+      serif;
+    color: white;
+  }
+  body {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center; /*centers (on x-axis)*/
+    align-items: center; /*centers (on y-axis)*/
+  }
+  #game_title {
+    color: white;
+    top: 5.5rem;
+    position: absolute;
+    font-size: var(--header-size);
+    animation: fadeIn linear 1s;
+    -webkit-animation: fadeIn linear 1s;
+    -moz-animation: fadeIn linear 1s;
+    -ms-animation: fadeIn linear 1s;
+    
+  }
+  @keyframes fadeIn {
+    0% {
+      opacity: 0.25;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  @-moz-keyframes fadeIn {
+    0% {
+      opacity: 0.25;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  @-webkit-keyframes fadeIn {
+    0% {
+      opacity: 0.25;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  @-ms-keyframes fadeIn {
+    0% {
+      opacity: 0.25;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  #upper {
+    width: 70%;
+    border-color: white;
+    border-style: solid;
+    border-width: 5px;
+    padding: 1rem;
+    border-radius: var(--border-radius);
+  }
+  #upper > h2 {
+    font-size: 2rem;
+    color: var(--default-text-color);
+  }
+  #lower > h1 {
+    font-size: 3rem;
+  }
+  #register-body {
+    width: 40%;
+    margin-top: 3rem;
+    
+  }
+  form {
+    display: flex;
+    justify-content: center; /*centers (on x-axis)*/
+    align-items: center; /*centers (on y-axis)*/
+    flex-direction: column;
+  }
+  
+  .username_field {
+    width: 100%;
+    height: 4rem;
+    border-radius: var(--border-radius);
+    border-width: 0;
+    font-size: var(--font-size);
+    font-weight: bold;
+    padding-left: 10px;
+  }
+  .next_question_block {
+    text-align: right;
+  }
+  
+  #register_user {
+    margin: 2rem;
+    width: 8rem;
+    height: 3rem;
+    font-size: var(--font-size);
+    border-radius: var(--border-radius);
+    border: none;
+    cursor: pointer;
+    background-color: var(--button-default-color);
+    font-family: serif;
+    transition: ease-in 0.25s;
+  }
+  #register_user:hover {
+    background-color: var(--hover-color);
+    color: white;
+    width: 10rem;
+    font-size: 1.85rem;
+  }
+  #score_Track_block {
+    position: absolute;
+    top: 2.5rem;
+    color: var(--default-text-color);
+    width: 70%;
+  }
+  #score_Track {
+    text-align: right;
+  }
+  .next_question {
+    font-size: large;
+    width: 7.5rem;
+    height: 3rem;
+    border: none;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    background-color: var(--button-default-color);
+    text-align: center;
+    font-size: 1.8rem;
+    color: rgb(40, 40, 128);
+    transition: ease-in 0.25s;
+  }
+  .next_question:hover {
+    background-color: var(--hover-color);
+    color: white;
+    width: 10rem;
+  }
+  .choices {
+    padding: 10px;
+    font-weight: 100;
+    cursor: pointer;
+  }
+  .choices:hover {
+    background: var(--hover-color);
+    border-radius: var(--border-radius);
+  }
+  #lower {
+    display: none;
+    opacity: 1;
+    border-color: white;
+    border-style: solid;
+    border-width: 5px;
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    text-align: center;
+  }
+  
+  #register-body > h1 {
+    font-size: 2rem;
+    color: white;
+  }
+  
+  #play_again {
+    width: 12rem;
+    height: 5rem;
+    border: none;
+  
+    cursor: pointer;
+    background: transparent;
+    font-weight: bold;
+    text-align: center;
+    font-size: 0.75rem;
+    transition: ease-in 0.25s;
+    border: 0;
+    /* border-bottom-width: 3.5px; */
+    border-style: solid;
+    background-color: var(--hover-color);
+    color: white;
+  }
+  
+  button#play_again:hover {
+    font-weight: bolder;
+    font-size: 1rem;
+    border-radius: var(--border-radius);
+  }
