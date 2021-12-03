@@ -2,6 +2,7 @@ function saveName() {
   localStorage.setItem("username", document.getElementById("uname").value);
   localStorage.setItem("show", true);
 }
+
 sport_questions = [
   {
     Q: "In 1999, Jason McAteer left Liverpool to join which club?",
