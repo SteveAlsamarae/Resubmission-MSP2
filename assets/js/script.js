@@ -55,3 +55,15 @@ function saveName() {
     document.getElementById(selected_choice).style.borderRadius = "1rem";
     last_option_selected = selected_option;
   }
+
+  function load_result() {
+    document.getElementById("upper").style.display = "none";
+    document.getElementById("score_Track").style.display = "none";
+    document.getElementById("lower").style.fontSize = "2.85rem";
+    document.getElementById("lower").style.display = "block";
+  
+    document.getElementById("final_score").innerHTML =
+      localStorage.getItem("username") + ", you have scored : " + score;
+    document.getElementById("final_score_result").style.fontSize = "4rem";
+    document.getElementById("final_score_result").innerHTML = score;
+  }
