@@ -87,3 +87,27 @@ function calculate_score() {
       return true;
     }
   }
+
+  function load_next_question() {
+    if (checkifselected()) {
+      calculate_score();
+  
+      if (question_index >= sport_questions.length - 1) {
+        load_result();
+      } else {
+        question_index += 1;
+        document.getElementById("question").innerHTML =
+          sport_questions[question_index]["Q"];
+        var choices = sport_questions[question_index]["C"];
+        let lis = ["A", "B", "C", "D"];
+  
+        choices.map((choice, index) => {
+          document.getElementById(`multiple_choices_${lis[index]}`).innerHTML =
+            choice;
+        });
+        document.getElementById(selected_option).style.background =
+          "rgb(66, 142, 172)";
+        last_option_selected = "";
+      }
+    }
+  }
