@@ -67,3 +67,23 @@ function saveName() {
     document.getElementById("final_score_result").style.fontSize = "4rem";
     document.getElementById("final_score_result").innerHTML = score;
   }
+
+const questions_length = sport_questions.length;
+var question_index = 0;
+let score = 0;
+
+function calculate_score() {
+    if (selected_option.slice(-1) == sport_questions[question_index]["A"]) {
+      score += 1;
+      document.getElementById("score_Track").innerHTML = "Score: " + score;
+    }
+  }
+  
+  function checkifselected() {
+    if (last_option_selected == "") {
+      alert("Please select some option");
+      return false;
+    } else {
+      return true;
+    }
+  }
