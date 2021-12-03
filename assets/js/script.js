@@ -111,3 +111,21 @@ function calculate_score() {
       }
     }
   }
+
+  function Re_Play() {
+    location.reload();
+  }
+
+  if (question_index == 0 && localStorage.getItem("show")) {
+    document.getElementById("question").innerHTML =
+      sport_questions[question_index]["Q"];
+  
+    var choices = sport_questions[question_index]["C"];
+    let lis = ["A", "B", "C", "D"];
+  
+    choices.map((choice, index) => {
+      document.getElementById(`multiple_choices_${lis[index]}`).innerHTML =
+        choice;
+    });
+    document.getElementById("score_Track").innerHTML = "Score: " + score;
+  }
